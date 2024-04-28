@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ /* Add some color to the background */
+ body {
+ background-color: #ffcc99;
+ }
+
+ /* Style the header */
+ header {
+ background-color: #333;
+ color: #fff;
+ padding: 10px;
+ text-align: center;
+ }
+
+ /* Style the navigation buttons */
+ nav {
+ background-color: #f2f2f2;
+ padding: 10px;
+ }
+
+ nav a {
+ color: #333;
+ text-decoration: none;
+ margin-right: 10px;
+ }
+
+ /* Style the body section */
+ .body-section {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding: 20px;
+ }
+
+ .body-section img {
+ width: 300px;
+ height: 300px;
+ }
+
+ /* Style the form section */
+ .form-section {
+ background-color: #f2f2f2;
+ padding: 20px;
+ }
+
+ /* Style the footer */
+ footer {
+ background-color: #333;
+ color: #fff;
+ padding: 10px;
+ text-align: center;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>Welcome to our Wellness and Self-Care Store</h1>
+ <nav>
+ <a href="#">Home</a>
+ <a href="#">Products</a>
+ <a href="#">About</a>
+ </nav>
+ </header>
+ <section class="body-section">
+ <img src="wellness-product.jpg" alt="Wellness product">
+ <p>Discover a wide range of high-quality wellness and self-care products to help you look and feel your best.</p>
+ </section>
+ <section class="form-section">
+ <h2>Contact Us</h2>
+ <form>
+ <label for="name">Name:</label><br>
+ <input type="text" id="name" name="name"><br>
+ <label for="email">Email:</label><br>
+ <input type="email" id="email" name="email"><br>
+ <label for="message">Message:</label><br>
+ <textarea id="message" name="message"></textarea><br>
+ <input type="submit" value="Submit">
+ </form>
+ </section>
+ <footer>
+ &copy; 2022 Wellness and Self-Care Store
+ </footer>
+
+ <!-- Add a submit event listener to the form -->
+ <script>
+ const form = document.querySelector('form');
+ const name = document.getElementById('name');
+ const email = document.getElementById('email');
+ const message = document.getElementById('message');
+
+ form.addEventListener('submit', (event) => {
+ // Prevent the form from being submitted
+ event.preventDefault();
+
+ // Validate the form fields
+ if (name.value === '' || email.value === '' || message.value === '') {
+ // If any of the form fields are empty, display an error message
+ alert('Please fill in all the form fields.');
+ } else {
+ // If all the form fields are filled in, submit the form
+ form.submit();
+ }
+ });
+ </script>
+</body>
+</html>
